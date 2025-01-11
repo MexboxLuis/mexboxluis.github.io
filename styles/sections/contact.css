@@ -1,0 +1,167 @@
+header {
+  transition: transform 0.75s ease, opacity 0.75s ease;
+}
+
+header.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+#contact.expanded {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: var(--md-sys-color-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+#contact h2,
+#contact h3 {
+  margin: 1.5rem 0;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.profile-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 150px;
+  border: 1px solid var(--md-sys-color-primary);
+  border-radius: 10%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.introduction-message {
+  font-size: 1.2rem;
+  color: var(--md-sys-color-primary);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#contact.expanded h2 {
+  padding: 1vh 10%;
+}
+
+#contact.expanded .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#contact.expanded .social-icons > * {
+  animation: bounce 1s infinite;
+  animation-delay: calc(var(--icon-index) * 0.2s);
+}
+
+.nickname {
+  color: var(--md-sys-color-secondary);
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-family: 'Dancing Script';
+  text-align: center;
+}
+
+.thank-you-message {
+  font-size: 1.5rem;
+  color: var(--md-sys-color-tertiary);
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.exit-button {
+  background: var(--md-sys-color-secondary);
+  color: var(--md-sys-color-on-secondary);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+.exit-button:hover {
+  background: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+  transform: scale(1.05);
+}
+
+.tech-shields {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.tech-shields img {
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.tech-shields img:hover {
+  transform: scale(1.1);
+}
+
+.made-with {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: var(--md-sys-color-primary);
+  text-align: center;
+}
+
+#goodbye-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.goodbye-text {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--md-sys-color-primary);
+  text-align: center;
+  opacity: 1;
+  animation: fadeOut 6s ease-out forwards;
+}
+
+.goodbye-text small {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--md-sys-color-secondary);
+}
+
+
+@keyframes fadeOut {
+  0% {
+      opacity: 1;
+      transform: scale(1);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(1.5);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

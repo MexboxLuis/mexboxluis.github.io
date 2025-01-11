@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Luis Alfredo</title>
+        <link rel="stylesheet" href="styles/theme.css">
+        <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/sections/about_me.css">
+        <link rel="stylesheet" href="styles/sections/education.css">
+        <link rel="stylesheet" href="styles/sections/portfolio.css">
+        <link rel="stylesheet" href="styles/sections/skills.css">
+        <link rel="stylesheet" href="styles/sections/contact.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    </head>
+
+    <body>
+
+        <header>
+            <nav class="index">
+                <img src="images/yo.png" alt="Foto de perfil"
+                    class="profile-pic">
+                <div class="header-dropdown">
+                    <span id="name"></span>
+                    <div id="dropdown" class="dropdown-content">
+                        <p id="dropdown-description"></p>
+                    </div>
+                </div>
+                <ul>
+                    <li><a href="#about" class="nav-link"
+                            id="nav-about"></a></li>
+                    <li><a href="#education" class="nav-link"
+                            id="nav-education"></a></li>
+                    <li><a href="#portfolio" class="nav-link"
+                            id="nav-portfolio"></a></li>
+                    <li><a href="#skills" class="nav-link"
+                            id="nav-skills"></a></li>
+                    <li><a href="#contact" class="nav-link"
+                            id="nav-contact"></a></li>
+                </ul>
+                <button id="header-toggle" class="header-toggle">☰</button>
+                <div class="header-content">
+                    <button id="theme-switch" class="theme-toggle-btn">
+                        <img id="theme-icon" src="images/light_mode.svg"
+                            alt="Theme Icon">
+                    </button>
+                    <button id="language-switch"
+                        class="language-toggle-btn"></button>
+                </div>
+            </nav>
+
+        </header>
+
+        <main class="content">
+            <section id="about">
+                <h2 id="about-title"></h2>
+                <p class="description" id="about-description"></p>
+
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/" target="_blank"
+                        class="icon">
+                        <img src="images/linkedin_icon.svg" alt="LinkedIn"
+                            class="icons">
+                    </a>
+                    <a href="https://github.com/MexboxLuis" target="_blank"
+                        class="icon">
+                        <img src="images/github_icon.svg" alt="GitHub"
+                            class="icons">
+                    </a>
+
+                    <div class="email-container">
+                        <input type="text" class="email-field"
+                            value="mexboxluis1@gmail.com" readonly>
+                        <button class="copy-email"></button>
+                    </div>
+                </div>
+
+                <a id="download-cv" href=""
+                    download="LuisCuamatzi_CV">
+                    <span id="download-cv-text"></span>
+                    <img src="images/document_icon.svg" alt="Curriculum vitae"
+                        class="icons">
+                </a>
+
+            </section>
+
+            <section id="education">
+                <h2 id="education-title"></h2>
+                <hr>
+                <div class="institution">
+                    <div class="logo">
+                        <img src="images/education/ipn_logo.png" alt="IPN Logo">
+                    </div>
+                    <div class="details">
+                        <h3 id="ipn-name"></h3>
+                        <p>
+                            <span class="location" id="ipn-location"></span>
+                            <span class="dates" id="ipn-dates"></span>
+                        </p>
+                        <p class="program" id="ipn-program"></p>
+                        <p class="description" id="ipn-description"></p>
+                    </div>
+                </div>
+                <hr>
+                <div class="institution">
+                    <div class="logo">
+                        <img src="images/education/qmul_logo.png" alt="QMUL Logo">
+                    </div>
+                    <div class="details">
+                        <h3 id="qmul-name"></h3>
+                        <p>
+                            <span class="location" id="qmul-location"></span>
+                            <span class="dates" id="qmul-dates"></span>
+                        </p>
+                        <p class="program" id="qmul-program"></p>
+                        <p class="description" id="qmul-description"></p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="portfolio">
+                <h2 id="portfolio-title"></h2>
+                <div class="project-cards-container">
+                    <div class="project-card" data-popup="popupPIT">
+                        <div class="card-inner">
+                            <div class="card-back">
+                                <div class="rect-large">
+                                    <img src="images/portfolio/pit_logo.png"
+                                        alt="PIT APP" class="project-image">
+                                </div>
+                                <div class="rect-small">
+                                    <div class="icons-line">
+                                        <a id="pit-github-link"
+                                            href="https://github.com/MexboxLuis/PIT-IPN-App"
+                                            target="_blank">
+                                            <img
+                                                src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
+                                                alt="GitHub">
+                                        </a>
+                                    </div>
+                                    <button class="open-popup"
+                                        id="pit-about-button"></button>
+                                </div>
+                            </div>
+                            <div class="card-front">
+                                <div class="rect-large">
+                                    <h2 class="project-title"
+                                        id="pit-title"></h2>
+                                    <p id="pit-description"></p>
+                                </div>
+                                <div class="rect-small">
+                                    <p>
+                                        <img
+                                            src="https://img.shields.io/badge/Jetpack%20Compose-3DDC84?style=for-the-badge&logo=jetpackcompose&logoColor=white"
+                                            alt="Jetpack Compose">
+                                        <img
+                                            src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white"
+                                            alt="Kotlin">
+                                        <img
+                                            src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=white"
+                                            alt="Firebase">
+
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-popup="popupSmartCrops">
+                        <div class="card-inner">
+                            <div class="card-back">
+                                <div class="rect-large">
+                                    <img
+                                        src="images/portfolio/smartcrops_logo.png"
+                                        alt="SmartCrops" class="project-image">
+                                </div>
+                                <div class="rect-small">
+                                    <p>
+                                        <div class="icons-line">
+                                            <a id="smartcrops-github-link"
+                                                href="https://github.com/MexboxLuis/SmartCrops.git"
+                                                target="_blank">
+                                                <img
+                                                    src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
+                                                    alt="GitHub">
+                                            </a>
+                                            <div class="buttons-container">
+                                                <button
+                                                    class="view-button button"
+                                                    data-gif="assets/smartcrops.gif">
+                                                    <span
+                                                        class="material-symbols-outlined">visibility</span>
+                                                </button>
+                                                <a
+                                                    href="assets/SmartCrops_Research_Bussiness.pdf"
+                                                    download="SmartCrops_Research_Bussiness"
+                                                    class="download-button button">
+                                                    <span
+                                                        class="material-symbols-outlined">download</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </p>
+                                    <button class="open-popup"
+                                        id="smartcrops-about-button"></button>
+                                </div>
+                            </div>
+                            <div class="card-front">
+                                <div class="rect-large">
+                                    <h2 class="project-title"
+                                        id="smartcrops-title"></h2>
+                                    <p id="smartcrops-description"></p>
+                                </div>
+                                <div class="rect-small">
+                                    <p>
+                                        <img
+                                            src="https://img.shields.io/badge/Jetpack%20Compose-3DDC84?style=for-the-badge&logo=jetpackcompose&logoColor=white"
+                                            alt="Jetpack Compose">
+                                        <img
+                                            src="https://img.shields.io/badge/Kotlin-0095D5?style=for-the-badge&logo=kotlin&logoColor=white"
+                                            alt="Kotlin">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hover-gif-container"
+                            id="hover-smartcrops-container">
+                            <img src="assets/smartcrops.gif" alt="GIF"
+                                class="hover-gif" id="smartcrops-gif">
+                        </div>
+
+                        <div class="project-card" data-popup="popupLexfy">
+                            <div class="card-inner">
+                                <div class="card-back">
+                                    <div class="rect-large">
+                                        <img
+                                            src="images/portfolio/lexfy_logo.png"
+                                            alt="LEXFY App"
+                                            class="project-image">
+                                    </div>
+                                    <div class="rect-small">
+                                        <p>
+                                            <div class="icons-line">
+                                                <a id="lexfy-github-link"
+                                                    href="https://github.com/MexboxLuis/Lexfy.git"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
+                                                        alt="GitHub">
+                                                </a>
+                                                <div class="buttons-container">
+                                                    <button
+                                                        class="view-button button"
+                                                        data-gif="assets/lexfy.gif">
+                                                        <span
+                                                            class="material-symbols-outlined">visibility</span>
+                                                    </button>
+                                                    <a
+                                                        href="assets/LEXFY_Manual.pdf"
+                                                        download="LEXFY_Manual"
+                                                        class="download-button button">
+                                                        <span
+                                                            class="material-symbols-outlined">download</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </p>
+                                        <button class="open-popup"
+                                            id="lexfy-about-button"></button>
+                                    </div>
+                                </div>
+                                <div class="card-front">
+                                    <div class="rect-large">
+                                        <h2 class="project-title"
+                                            id="lexfy-title"></h2>
+                                        <p id="lexfy-description"></p>
+                                    </div>
+                                    <div class="rect-small">
+                                        <p>
+                                            <img
+                                                src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"
+                                                alt="TensorFlow">
+                                            <img
+                                                src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white"
+                                                alt="Flask">
+                                            <img
+                                                src="https://img.shields.io/badge/Jetpack%20Compose-3DDC84?style=for-the-badge&logo=jetpackcompose&logoColor=white"
+                                                alt="Jetpack Compose">
+                                            <img
+                                                src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=white"
+                                                alt="Firebase">
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hover-gif-container"
+                            id="hover-lexfy-container">
+                            <img src="assets/lexfy.gif" alt="GIF"
+                                class="hover-gif" id="lexfy-gif">
+                        </div>
+
+                        <div class="project-card" data-popup="popupSmartEMG">
+                            <div class="card-inner">
+                                <div class="card-back">
+                                    <div class="rect-large">
+                                        <img
+                                            src="images/portfolio/smartemg_logo.png"
+                                            alt="SmartEMG Vision"
+                                            class="project-image">
+                                    </div>
+                                    <div class="rect-small">
+                                        <p>
+                                            <div class="icons-line">
+                                                <a id="smartemg-github-link"
+                                                    href="https://github.com/MexboxLuis/SmartEMG-Vision.git"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
+                                                        alt="GitHub">
+                                                </a>
+                                                <div class="buttons-container">
+                                                    <button
+                                                        class="view-button button"
+                                                        data-gif="assets/smartemg.gif">
+                                                        <span
+                                                            class="material-symbols-outlined">visibility</span>
+                                                    </button>
+                                                    <a
+                                                        href="assets/SmartEMG_Poster.pdf"
+                                                        download="SmartEMG_Poster"
+                                                        class="download-button button">
+                                                        <span
+                                                            class="material-symbols-outlined">download</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </p>
+                                        <button class="open-popup"
+                                            id="smartemg-about-button"></button>
+                                    </div>
+                                </div>
+                                <div class="card-front">
+                                    <div class="rect-large">
+                                        <h2 class="project-title"
+                                            id="smartemg-title"></h2>
+                                        <p id="smartemg-description"></p>
+                                    </div>
+                                    <div class="rect-small">
+                                        <p>
+                                            <img
+                                                src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"
+                                                alt="TensorFlow">
+                                            <img
+                                                src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white"
+                                                alt="Flask">
+                                            <img
+                                                src="https://img.shields.io/badge/Jetpack%20Compose-3DDC84?style=for-the-badge&logo=jetpackcompose&logoColor=white"
+                                                alt="Jetpack Compose">
+                                            <img
+                                                src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white"
+                                                alt="Kotlin">
+                                            <img
+                                                src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"
+                                                alt="Python">
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hover-gif-container"
+                            id="hover-smartemg-container">
+                            <img src="assets/smartemg.gif" alt="GIF"
+                                class="hover-gif" id="smartemg-gif">
+                        </div>
+
+                    </div>
+
+                    <div class="reading-popup" id="popupPIT">
+
+                        <div class="popup-text">
+                            <button class="scroll-btn up"
+                                data-target="up">▲</button>
+                            <button class="scroll-btn down"
+                                data-target="down">▼</button>
+                            <div class="popup-section active" id="section-tech">
+                                <h2 id="pit-tech-title"></h2>
+                                <p id="pit-tech-content"></p>
+                            </div>
+
+                            <div class="popup-section" id="section-purpose">
+                                <h2 id="pit-purpose-title"></h2>
+                                <p id="pit-purpose-content"></p>
+                            </div>
+
+                            <div class="popup-section" id="section-how">
+                                <h2 id="pit-how-title"></h2>
+                                <p id="pit-how-content"></p>
+
+                            </div>
+                            <button class="read-ok" id="pit-read-ok"></button>
+                        </div>
+                    </div>
+
+                    <div class="reading-popup" id="popupSmartCrops">
+                        <div class="popup-text">
+                            <button class="scroll-btn up" data-target="up">▲</button>
+                            <button class="scroll-btn down" data-target="down">▼</button>
+                            <div class="popup-section active">
+                                <h2 id="smartcrops-tech-title"></h2>
+                                <p id="smartcrops-tech-content"></p>
+                            </div>
+                            <div class="popup-section">
+                                <h2 id="smartcrops-purpose-title"></h2>
+                                <p id="smartcrops-purpose-content"></p>
+                            </div>
+                            <div class="popup-section" id="section-how">
+                                <h2 id="smartcrops-how-title"></h2>
+                                <p id="smartcrops-how-content"></p>
+                            </div>
+                            <button class="read-ok" id="smartcrops-read-ok"></button>
+                        </div>
+                    </div>                    
+
+                    <div class="reading-popup" id="popupLexfy">
+                        <div class="popup-text">
+                            <button class="scroll-btn up"
+                                data-target="up">▲</button>
+                            <button class="scroll-btn down"
+                                data-target="down">▼</button>
+                            <div class="popup-section active">
+                                <h2 id="lexfy-tech-title"></h2>
+                                <p id="lexfy-tech-content"></p>
+                            </div>
+                            <div class="popup-section">
+                                <h2 id="lexfy-purpose-title"></h2>
+                                <p id="lexfy-purpose-content"></p>
+                            </div>
+                            <div class="popup-section" id="section-how">
+                                <h2 id="lexfy-how-title"></h2>
+                                <p id="lexfy-how-content"></p>
+
+                            </div>
+                            <button class="read-ok" id="lexfy-read-ok"></button>
+                        </div>
+                    </div>
+
+                    <div class="reading-popup" id="popupSmartEMG">
+                        <div class="popup-text">
+                            <button class="scroll-btn up"
+                                data-target="up">▲</button>
+                            <button class="scroll-btn down"
+                                data-target="down">▼</button>
+                            <div class="popup-section active">
+                                <h2 id="smartemg-tech-title"></h2>
+                                <p id="smartemg-tech-content"></p>
+                            </div>
+                            <div class="popup-section">
+                                <h2 id="smartemg-purpose-title"></h2>
+                                <p id="smartemg-purpose-content"></p>
+                            </div>
+                            <div class="popup-section" id="section-how">
+                                <h2 id="smartemg-how-title"></h2>
+                                <p id="smartemg-how-content"></p>
+
+                            </div>
+                            <button class="read-ok"
+                                id="smartemg-read-ok"></button>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section id="skills">
+                    <h2 id="skills-title"></h2>
+                    <div class="categories-container">
+                        <div class="category" data-popup-target="aiPopup">
+                            <div class="square-section"
+                                id="ai-category-title"></div>
+                            <div class="rect-section">
+                                <div class="shields">
+                                    <img
+                                        src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"
+                                        alt="TensorFlow">
+                                    <img
+                                        src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"
+                                        alt="PyTorch">
+                                    <img
+                                        src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white"
+                                        alt="Scikit-Learn">
+                                    <img
+                                        src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white"
+                                        alt="OpenCV">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category" data-popup-target="mobilePopup">
+                            <div class="square-section"
+                                id="mobile-category-title"></div>
+                            <div class="rect-section">
+                                <div class="shields">
+                                    <img
+                                        src="https://img.shields.io/badge/AndroidViews-3DDC84?style=for-the-badge&logo=android&logoColor=white"
+                                        alt="AndroidViews">
+                                    <img
+                                        src="https://img.shields.io/badge/Jetpack_Compose-4285F4?style=for-the-badge&logo=jetpack-compose&logoColor=white"
+                                        alt="Jetpack Compose">
+                                    <img
+                                        src="https://img.shields.io/badge/SwiftUI-FA7343?style=for-the-badge&logo=swift&logoColor=white"
+                                        alt="SwiftUI">
+                                    <img
+                                        src="https://img.shields.io/badge/React_Native-61DAFB?style=for-the-badge&logo=react&logoColor=black"
+                                        alt="React Native">
+                                    <img
+                                        src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white"
+                                        alt="Flutter">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category" data-popup-target="webPopup">
+                            <div class="square-section"
+                                id="web-category-title"></div>
+                            <div class="rect-section">
+                                <div class="shields">
+                                    <img
+                                        src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
+                                        alt="HTML5">
+                                    <img
+                                        src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
+                                        alt="CSS3">
+                                    <img
+                                        src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"
+                                        alt="JavaScript">
+                                    <img
+                                        src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black"
+                                        alt="React">
+                                    <img
+                                        src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white"
+                                        alt="Node.js">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category"
+                            data-popup-target="softSkillsPopup">
+                            <div class="square-section"
+                                id="soft-skills-category-title"></div>
+                            <div class="rect-section">
+                                <div class="shields">
+                                    <img
+                                        src="https://img.shields.io/badge/Extreme%20Programming-3E7BA0?style=for-the-badge&logoColor=white"
+                                        alt="Extreme Programming">
+                                    <img
+                                        src="https://img.shields.io/badge/Kanban-2E9FFF?style=for-the-badge&logo=kanban&logoColor=white"
+                                        alt="Kanban">
+                                    <img
+                                        src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
+                                        alt="GitHub">
+                                    <img
+                                        src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"
+                                        alt="Git">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category" data-popup-target="dbPopup">
+                            <div class="square-section"
+                                id="db-category-title"></div>
+                            <div class="rect-section">
+                                <div class="shields">
+                                    <img
+                                        src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"
+                                        alt="MySQL">
+                                    <img
+                                        src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white"
+                                        alt="SQLite">
+                                    <img
+                                        src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"
+                                        alt="Firebase">
+                                    <img
+                                        src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white"
+                                        alt="MongoDB">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="aiPopup" class="popup">
+                        <div class="popup-content">
+                            <h3 id="ai-popup-title"></h3>
+                            <div class="skills-category active">
+                                <div class="skill-circle" data-progress="75">
+                                    <img src="images/skills/tensorflow.png"
+                                        alt="TensorFlow">
+                                </div>
+                                <label id="tensorflow-label"></label>
+                                <div class="skill-circle" data-progress="75">
+                                    <img src="images/skills/pytorch.png"
+                                        alt="PyTorch">
+                                </div>
+                                <label id="pytorch-label"></label>
+                            </div>
+
+                            <div class="skills-technologies">
+                                <h4>Stack</h4>
+                                <p>
+                                    <a href="https://www.python.org"
+                                        target="_blank">
+                                        <img
+                                            src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"
+                                            alt="Python">
+                                    </a>
+                                    <a href="https://colab.research.google.com/"
+                                        target="_blank">
+                                        <img
+                                            src="https://img.shields.io/badge/Colab-F37626?style=for-the-badge&logo=jupyter&logoColor=white"
+                                            alt="Open In Colab">
+                                    </a>
+                                    <a href="https://numpy.org" target="_blank">
+                                        <img
+                                            src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white"
+                                            alt="NumPy">
+                                    </a>
+                                    <a href="https://pandas.pydata.org"
+                                        target="_blank">
+                                        <img
+                                            src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"
+                                            alt="Pandas">
+                                    </a>
+                                    <a href="https://scikit-learn.org"
+                                        target="_blank">
+                                        <img
+                                            src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white"
+                                            alt="Scikit-Learn">
+                                    </a>
+                                    <a href="https://opencv.org"
+                                        target="_blank">
+                                        <img
+                                            src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white"
+                                            alt="OpenCV">
+                                    </a>
+                                </p>
+                            </div>
+                            <button class="close-button"
+                                id="ai-close-button">×</button>
+                        </div>
+                    </div>
+
+                    <div id="mobilePopup" class="popup">
+                        <div class="popup-content">
+                            <h3 id="mobile-popup-title"></h3>
+                            <div class="carousel">
+                                <div class="carousel-container">
+                                    <div class="skills-category active">
+                                        <h4 id="android-title"></h4>
+                                        <div class="skill-circle"
+                                            data-progress="50">
+                                            <img
+                                                src="images/skills/android_views.png"
+                                                alt="Android Views">
+                                        </div>
+                                        <label id="android-views-label"></label>
+                                        <div class="skill-circle"
+                                            data-progress="95">
+                                            <img
+                                                src="images/skills/jetpack_compose.png"
+                                                alt="Jetpack Compose">
+                                        </div>
+                                        <label
+                                            id="jetpack-compose-label"></label>
+                                        <div class="skills-technologies">
+                                            <h4>Stack</h4>
+                                            <p>
+                                                <a href="https://kotlinlang.org"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/Kotlin-0095D5?style=for-the-badge&logo=kotlin&logoColor=white"
+                                                        alt="Kotlin">
+                                                </a>
+                                                <a
+                                                    href="https://developer.android.com/guide/topics/ui/declaring-layout"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/XML-006699?style=for-the-badge&logo=html5&logoColor=white"
+                                                        alt="XML">
+                                                </a>
+
+                                                <a href="https://material.io"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/Material_Design-757575?style=for-the-badge&logo=material-design&logoColor=white"
+                                                        alt="Material Design">
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="skills-category">
+                                        <h4 id="ios-title"></h4>
+                                        <div class="skill-circle"
+                                            data-progress="25">
+                                            <img
+                                                src="images/skills/swift_ui.png"
+                                                alt="SwiftUI">
+                                        </div>
+                                        <label id="swift-ui-label"></label>
+                                        <div class="skill-circle"
+                                            data-progress="25">
+                                            <img src="images/skills/uikit.png"
+                                                alt="UIKit">
+                                        </div>
+                                        <label id="uikit-label"></label>
+
+                                        <div class="skills-technologies">
+                                            <h4>Stack</h4>
+                                            <p>
+                                                <a
+                                                    href="https://developer.apple.com/xcode/"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/Xcode-1575F9?style=for-the-badge&logo=xcode&logoColor=white"
+                                                        alt="Xcode">
+                                                </a>
+                                                <a href="https://swift.org/"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white"
+                                                        alt="Swift">
+                                                </a>
+                                                <a
+                                                    href="https://developer.apple.com/documentation/coredata"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/Core%20Data-673AB7?style=for-the-badge&logo=core-data&logoColor=white"
+                                                        alt="Core Data">
+                                                </a>
+
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                    <div class="skills-category">
+                                        <h4 id="multiplatform-title"></h4>
+                                        <div class="skill-circle"
+                                            data-progress="50">
+                                            <img
+                                                src="images/skills/react_navite.png"
+                                                alt="React Native">
+                                        </div>
+                                        <label id="react-native-label"></label>
+                                        <div class="skill-circle"
+                                            data-progress="25">
+                                            <img src="images/skills/flutter.png"
+                                                alt="Flutter">
+                                        </div>
+                                        <label id="flutter-label"></label>
+                                        <div class="skills-technologies">
+                                            <h4>Stack</h4>
+                                            <p>
+                                                <a href="https://dart.dev/"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white"
+                                                        alt="Dart">
+                                                </a>
+                                                <a
+                                                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"
+                                                        alt="JavaScript">
+                                                </a>
+                                                <a
+                                                    href="https://www.typescriptlang.org/"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"
+                                                        alt="TypeScript">
+                                                </a>
+                                                <a href="https://expo.dev/"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white"
+                                                        alt="Expo">
+                                                </a>
+                                                <a href="https://redux.js.org/"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white"
+                                                        alt="Redux">
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="carousel-controls">
+                                    <button class="carousel-prev">❮</button>
+                                    <div class="carousel-dots"></div>
+                                    <button class="carousel-next">❯</button>
+                                </div>
+                            </div>
+                            <button class="close-button"
+                                id="mobile-close-button">×</button>
+                        </div>
+                    </div>
+
+                    <div id="webPopup" class="popup">
+                        <div class="popup-content">
+                            <h3 id="web-popup-title"></h3>
+                            <div class="carousel">
+                                <div class="carousel-container">
+                                    <div class="skills-category active">
+                                        <h4 id="native-title"></h4>
+                                        <div class="skill-circle"
+                                            data-progress="85">
+                                            <img
+                                                src="images/skills/html-css.png"
+                                                alt="Html+Css">
+                                        </div>
+                                        <label id="html-css-label"></label>
+                                        <div class="skill-circle"
+                                            data-progress="75">
+                                            <img
+                                                src="images/skills/javascript.png"
+                                                alt="JavaScript">
+                                        </div>
+                                        <label id="javascript-label"></label>
+                                        <div class="skills-technologies">
+                                            <h4>Stack</h4>
+                                            <p>
+                                                <a
+                                                    href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
+                                                        alt="HTML5">
+                                                </a>
+                                                <a
+                                                    href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
+                                                        alt="CSS3">
+                                                </a>
+                                                <a
+                                                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"
+                                                        alt="JavaScript">
+                                                </a>
+                                                <a
+                                                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/AJAX"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/AJAX-00599C?style=for-the-badge&logo=javascript&logoColor=white"
+                                                        alt="AJAX">
+                                                </a>
+                                                <a href="https://www.json.org"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white"
+                                                        alt="JSON">
+                                                </a>
+                                                <a
+                                                    href="https://getbootstrap.com"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white"
+                                                        alt="Bootstrap">
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="skills-category">
+                                        <h4 id="frameworks-title"></h4>
+                                        <div class="skill-circle"
+                                            data-progress="55">
+                                            <img src="images/skills/react.png"
+                                                alt="React">
+                                        </div>
+                                        <label id="react-label"></label>
+                                        <div class="skill-circle"
+                                            data-progress="60">
+                                            <img src="images/skills/nodejs.png"
+                                                alt="Node.js">
+                                        </div>
+                                        <label id="nodejs-label"></label>
+                                        <div class="skills-technologies">
+                                            <h4>Stack</h4>
+                                            <p>
+                                                <a href="https://nextjs.org"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"
+                                                        alt="Next.js">
+                                                </a>
+                                                <a href="https://expressjs.com"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white"
+                                                        alt="Express.js">
+                                                </a>
+                                                <a href="https://redux.js.org"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white"
+                                                        alt="Redux">
+                                                </a>
+                                                <a href="https://www.cypress.io"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white"
+                                                        alt="Cypress">
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-controls">
+                                    <button class="carousel-prev">❮</button>
+                                    <div class="carousel-dots"></div>
+                                    <button class="carousel-next">❯</button>
+                                </div>
+                            </div>
+                            <button class="close-button"
+                                id="web-close-button">×</button>
+                        </div>
+                    </div>
+
+                    <div id="softSkillsPopup" class="popup">
+                        <div class="popup-content">
+                            <h3 id="soft-skills-popup-title"></h3>
+                            <div class="skills-category active">
+                                <div class="skill-circle" data-progress="90">
+                                    <img
+                                        src="images/skills/extreme-programming.png"
+                                        alt="Programación Extrema">
+                                </div>
+                                <label id="xp-label"></label>
+                            </div>
+                            <div class="skills-category active">
+                                <div class="skill-circle" data-progress="75">
+                                    <img src="images/skills/kanban.png"
+                                        alt="Kanban">
+                                </div>
+                                <label id="kanban-label"></label>
+                            </div>
+                            <div class="skills-technologies">
+                                <h4>Stack</h4>
+                                <p>
+                                    <a href="https://trello.com"
+                                        target="_blank">
+                                        <img
+                                            src="https://img.shields.io/badge/Trello-0079BF?style=for-the-badge&logo=trello&logoColor=white"
+                                            alt="Trello">
+                                    </a>
+                                    <a href="https://asana.com" target="_blank">
+                                        <img
+                                            src="https://img.shields.io/badge/Asana-F06A6A?style=for-the-badge&logo=asana&logoColor=white"
+                                            alt="Asana">
+                                    </a>
+                                    <a href="https://github.com"
+                                        target="_blank">
+                                        <img
+                                            src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
+                                            alt="GitHub">
+                                    </a>
+                                    <a href="https://git-scm.com/"
+                                        target="_blank">
+                                        <img
+                                            src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"
+                                            alt="Git">
+                                    </a>
+
+                                </p>
+                            </div>
+                            <button class="close-button"
+                                id="soft-skills-close-button">×</button>
+                        </div>
+                    </div>
+
+                    <div id="dbPopup" class="popup">
+                        <div class="popup-content">
+                            <h3 id="db-popup-title"></h3>
+                            <div class="carousel">
+                                <div class="carousel-container">
+                                    <div class="skills-category active">
+                                        <h4 id="sql-title"></h4>
+                                        <div class="skill-circle"
+                                            data-progress="75">
+                                            <img src="images/skills/mysql.png"
+                                                alt="MySQL">
+                                        </div>
+                                        <label id="mysql-label"></label>
+                                        <div class="skill-circle"
+                                            data-progress="50">
+                                            <img src="images/skills/sqlite.png"
+                                                alt="SQLite">
+                                        </div>
+                                        <label id="sqlite-label"></label>
+                                        <div class="skills-technologies">
+                                            <h4>Stack</h4>
+                                            <p>
+                                                <a
+                                                    href="https://www.sqlalchemy.org/"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/SQLAlchemy-FF5733?style=for-the-badge&logo=sqlalchemy&logoColor=white"
+                                                        alt="SQLAlchemy">
+                                                </a>
+                                                <a href="https://dbeaver.io/"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/DBeaver-382923?style=for-the-badge&logo=dbeaver&logoColor=white"
+                                                        alt="DBeaver">
+                                                </a>
+                                                <a href="https://sequelize.org/"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=sequelize&logoColor=white"
+                                                        alt="Sequelize">
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="skills-category">
+                                        <h4 id="nosql-title"></h4>
+                                        <div class="skill-circle"
+                                            data-progress="80">
+                                            <img
+                                                src="images/skills/firebase.png"
+                                                alt="Firebase">
+                                        </div>
+                                        <label id="firebase-label"></label>
+                                        <div class="skill-circle"
+                                            data-progress="75">
+                                            <img
+                                                src="images/skills/mongo_db.png"
+                                                alt="MongoDB">
+                                        </div>
+                                        <label id="mongodb-label"></label>
+                                        <div class="skills-technologies">
+                                            <h4>Stack</h4>
+                                            <p>
+                                                <a
+                                                    href="https://firebase.google.com/docs/storage"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/Firebase%20Storage-FFA611?style=for-the-badge&logo=firebase&logoColor=black"
+                                                        alt="Firebase Storage">
+                                                </a>
+                                                <a
+                                                    href="https://firebase.google.com/docs/analytics"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/Firebase%20Analytics-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"
+                                                        alt="Firebase Analytics">
+                                                </a>
+                                                <a
+                                                    href="https://www.mongodb.com/realm"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/Realm-39477F?style=for-the-badge&logo=realm&logoColor=white"
+                                                        alt="Realm">
+                                                </a>
+                                                <a
+                                                    href="https://www.mongodb.com/cloud/atlas"
+                                                    target="_blank">
+                                                    <img
+                                                        src="https://img.shields.io/badge/MongoDB%20Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white"
+                                                        alt="MongoDB Atlas">
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-controls">
+                                    <button class="carousel-prev">❮</button>
+                                    <div class="carousel-dots"></div>
+                                    <button class="carousel-next">❯</button>
+                                </div>
+                            </div>
+                            <button class="close-button"
+                                id="db-close-button">×</button>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section id="contact">
+                    <h2 id="contact-title"></h2>
+
+                    <img src="images/img_yo.jpg" alt="yo" ,
+                        class="profile-image">
+
+                    <h3 class="introduction-message"
+                        id="contact-intro-message"></h3>
+
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/" target="_blank"
+                            class="icon">
+                            <img src="images/linkedin_icon.svg" alt="LinkedIn"
+                                class="icons">
+                        </a>
+                        <a href="https://github.com/MexboxLuis" target="_blank"
+                            class="icon">
+                            <img src="images/github_icon.svg" alt="GitHub"
+                                class="icons">
+                        </a>
+
+                        <div class="email-container">
+                            <input type="text" class="email-field"
+                                value="mexboxluis1@gmail.com" readonly>
+                            <button class="copy-email"></button>
+                        </div>
+                    </div>
+
+                    <h4 class="nickname" id="contact-nickname"></h4>
+                    <h3 class="thank-you-message" id="contact-thank-you"></h3>
+
+                    <button id="exit-contact" class="exit-button"></button>
+                    <h4 class="made-with" id="contact-made-with"></h4>
+                    <div class="tech-shields">
+
+                        <img
+                            src="https://img.shields.io/badge/HTML5-orange?style=flat-square&logo=html5&logoColor=white"
+                            alt="HTML5">
+                        <img
+                            src="https://img.shields.io/badge/CSS3-blue?style=flat-square&logo=css3&logoColor=white"
+                            alt="CSS3">
+                        <img
+                            src="https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge&logo=javascript&logoColor=black"
+                            alt="JavaScript">
+                    </div>
+
+                </section>
+
+            </main>
+
+            <script src="scripts/navigation.js"></script>
+            <script src="scripts/theme.js"></script>
+            <script src="scripts/language.js"></script>
+            <script src="scripts/header_toggle.js"></script>
+            <script src="scripts/copy_email.js"></script>
+            <script src="scripts/sections/skills.js"></script>
+            <script src="scripts/sections/portfolio.js"></script>
+            <script src="scripts/sections/contact.js"></script>
+        </body>
+
+    </html>

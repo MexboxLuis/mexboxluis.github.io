@@ -1,0 +1,126 @@
+#education {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+}
+
+#education h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    color: var(--md-sys-color-primary);
+}
+
+
+#education hr {
+    border: none;
+    border-top: 1px solid var(--md-sys-color-outline);
+    margin: 25px 0;
+}
+
+.institution {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-right: 15vh;
+}
+
+.institution .logo {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.institution .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.institution .details {
+    flex-grow: 1;
+}
+
+.institution .details h3 {
+    color: var(--md-sys-color-primary);
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.institution .details p {
+    margin: 4px 0;
+    font-size: 1.05rem;
+    color: var(--md-sys-color-on-surface-variant);
+    display: flex;
+
+}
+
+.institution .details .location {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.institution .details .dates {
+    font-weight: lighter;
+    display: inline-flex;
+    text-shadow: 0 0 1px var(--md-sys-color-on-background);
+    margin-left: auto;
+    align-items: center;
+}
+
+.institution .details .program {
+    font-size: 1.15rem;
+    color: var(--md-sys-color-tertiary);
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.institution .details .description {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--md-sys-color-on-surface-variant);
+    text-align: justify;
+}
+
+@media (max-width: 1000px) {
+    .institution {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; 
+        padding-right: 0; 
+    }
+
+    .institution .logo img {
+        display: block;
+    }
+
+    .institution .details {
+        text-align: center; 
+    }
+
+    .institution .details h3,
+    .institution .details p,
+    .institution .details .program,
+    .institution .details .description,
+    .institution .details .location,
+    .institution .details .dates {
+        display: block;
+        text-align: center; 
+    }
+
+    .institution .details .dates {
+        margin-left: 0; 
+        justify-content: center; 
+    }
+}

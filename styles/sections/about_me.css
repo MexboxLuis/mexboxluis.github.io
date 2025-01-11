@@ -1,0 +1,136 @@
+
+.description {
+    font-size: 1.1em;
+    text-align: justify;
+    line-height: 1.6;
+    color: var(--md-sys-color-on-surface); 
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px; 
+    align-items: start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.icon {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--md-sys-color-secondary);
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    background-color: var(--md-sys-color-primary-container); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.icon img {
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+    transition: filter 0.2s;
+}
+
+.icons {
+    pointer-events: none;
+    filter: hue-rotate(40deg) brightness(0.8) saturate(0.6) sepia(100%); 
+}
+
+.email-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--md-sys-color-surface-container);
+    border-radius: 10px;
+    padding: 8px 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 10px;
+    max-width: 350px; 
+    transition: transform 0.2s;
+}
+
+.email-container:hover {
+    transform: scale(1.05); 
+}
+
+.email-field {
+    border: none;
+    background: transparent;
+    font-size: 14px; 
+    color: var(--md-sys-color-on-surface-variant);
+    text-align: center;
+    cursor: text;
+    width: 100%;
+    outline: none;
+}
+
+
+.copy-email {
+    padding: 5px 12px;
+    font-size: 14px;
+    border: none;
+    background-color: var(--md-sys-color-secondary);
+    color: var(--md-sys-color-on-secondary);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.copy-email:hover {
+    background-color: var(--md-sys-color-primary-container);
+    transform: scale(1.05);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+.email-field::selection {
+    background: transparent; 
+}
+
+#download-cv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    background-color: var(--md-sys-color-secondary);
+    color: var(--md-sys-color-on-secondary);
+    border-radius: 10px; 
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    margin-top: 20px;
+    align-self: flex-start;
+    text-decoration: none;
+}
+
+#download-cv:hover {
+    background-color: var(--md-sys-color-primary-container);
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    color: var(--md-sys-color-on-primary-container); 
+}
+
+#download-cv:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+#download-cv .icons {
+    margin-left: 8px; 
+    width: 20px; 
+    height: 20px; 
+}
