@@ -8,8 +8,8 @@
 }
 
 .project-card {
-    flex: 1 1 280px;
-    max-width: 300px;
+    flex: 1 1 260px;
+    max-width: 280px;
     aspect-ratio: 1 / 1.2;
     perspective: 1000px;
     border: 2px solid var(--md-sys-color-primary);
@@ -127,14 +127,14 @@
 
 
 .project-title {
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: center;
 }
 
 .rect-large p {
     display: -webkit-box;
-    -webkit-line-clamp: 4;
-    line-clamp: 4;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     box-orient: vertical;
     overflow: hidden;
@@ -229,7 +229,6 @@
     color: var(--md-sys-color-primary);
     border: none;
     cursor: pointer;
-
     z-index: 10;
     display: flex;
     justify-content: center;

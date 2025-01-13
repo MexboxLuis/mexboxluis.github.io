@@ -1,9 +1,13 @@
 const translations = {
   es: {
-    // header translation
+    
+    tabFocus: {
+      hiddenTitle: "¡No te vayas, contáctame antes!",
+      focusTitle: "Portafolio L.A.C.F. [🇲🇽] ",
+    },
     name: "Luis Alfredo <br> Cuamatzi Flores",
     description:
-      "Ingeniero en Inteligencia Artificial en formación, desarrollador móvil y entusiasta de IA",
+      "¡Bienvenido! Echa un vistazo a mis proyectos y trabajemos juntos si te interesa mi perfil.",
     nav: {
       about: "Yo",
       education: "Educación",
@@ -15,7 +19,7 @@ const translations = {
     about: {
       title: "Sobre Mí",
       description:
-        "Soy Luis Alfredo Cuamatzi Flores, estudiante de Ingeniería en Inteligencia Artificial, durante mi desarrollo he adquirido experiencia en áreas como machine learning, visión por computadora y procesamiento de lenguaje natural. Me apasiona aplicar estos conocimientos para desarrollar soluciones innovadoras que resuelvan problemas del mundo real.",
+        "Soy Luis Alfredo Cuamatzi Flores, estudiante de Ingeniería en Inteligencia Artificial, durante mi desarrollo he adquirido experiencia en áreas como machine learning, visión por computadora y procesamiento de lenguaje natural. Me gusta implementar sistemas, algoritmos o modelos de inteligencia artificial en software funcional.",
       "download-cv": "Descargar CV",
       "copy-email": "Copiar",
       copied: "Copiado!",
@@ -233,10 +237,17 @@ const translations = {
       exit: "Salir"
     },
   },
+
+//! english translation !//
+
   en: {
+    tabFocus: {
+      hiddenTitle: "Don\'t leave, contact me first! ",
+      focusTitle: "Portfolio L.A.C.F. [🇲🇽]",
+    },
     // header translation
     name: "Luis Alfredo <br> Cuamatzi Flores",
-    description: "AI Engineering student, mobile developer, and AI enthusiast",
+    description: "Welcome! Take a look at my projects, and let\’s work together if you\’re interested in my profile.",
     nav: {
       about: "Bio",
       education: "Education",
@@ -248,7 +259,7 @@ const translations = {
     about: {
       title: "About Me",
       description:
-        "I am Luis Alfredo Cuamatzi Flores, a student of Artificial Intelligence Engineering, throughout my development, I have gained experience in areas such as machine learning, computer vision, and natural language processing. I am passionate about applying this knowledge to develop innovative solutions that address real-world problems.",
+        "I am Luis Alfredo Cuamatzi Flores, a student of Artificial Intelligence Engineering, throughout my development, I have gained experience in areas such as machine learning, computer vision, and natural language processing. I enjoy implementing systems, algorithms, or artificial intelligence models in functional software.",
       "download-cv": "Download CV",
       "copy-email": "Copy",
       copied: "Copied!",
@@ -660,6 +671,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const langData = translations[lang];
 
     if (langData) {
+
+
+      document.addEventListener('visibilitychange', function() {
+        if (document.visibilityState === 'hidden') {
+            document.title = langData.tabFocus.hiddenTitle;
+            changeFavicon('favicon-2.ico'); 
+        } else {
+            document.title = langData.tabFocus.focusTitle;
+            changeFavicon('favicon-1.ico'); 
+        }
+      });
+
       // ? header
       if (nameElement) {
         nameElement.innerHTML = langData.name;
@@ -1071,3 +1094,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+function changeFavicon(filename) {
+  const favicon = document.getElementById('favicon');
+  favicon.href = `assets/${filename}`;
+}

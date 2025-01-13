@@ -1,15 +1,15 @@
-const headerContent = document.querySelector(".header-content");
+const headerContentToggle = document.querySelector(".header-content-toggle");
 const headerToggle = document.getElementById("header-toggle");
 const nameSpan = document.getElementById("name");
 
-headerContent.classList.remove("visible");
-headerToggle.classList.remove("visible");
+headerContentToggle.style.display = "none";
 
 headerToggle.addEventListener("click", () => {
-    const isVisible = headerContent.classList.toggle("visible");
-    headerToggle.classList.toggle("visible", isVisible);
-    headerToggle.textContent = isVisible ? "✖" : "☰";
+    const isVisible = headerContentToggle.style.display === "flex";
+    headerContentToggle.style.display = isVisible ? "none" : "flex";
+    headerToggle.textContent = isVisible ? "☰" : "✖";
 });
+
 
 nameSpan.addEventListener("click", () => {
     const helloContainer = document.createElement('div');
