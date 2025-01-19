@@ -317,7 +317,7 @@ header::before {
         justify-content: space-between;
         align-items: center;
         padding: 10px 20px;
-        z-index: 1001;
+        z-index: 12;
         overflow-x: scroll;
         -ms-overflow-style: none;
         scrollbar-width: none;
