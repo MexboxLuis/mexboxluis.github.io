@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Luis Alfredo Cuamatzi Flores - Software Engineer Portfolio. Crafting digital experiences with passion and precision.">
+  <title>Luis Alfredo - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/hero.css">
+  <link rel="stylesheet" href="assets/css/education.css">
+  <link rel="stylesheet" href="assets/css/projects.css">
+  <link rel="stylesheet" href="assets/css/experience.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+  <link rel="stylesheet" href="assets/css/modal.css">
+</head>
+
+<body>
+
+  <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Menu">
+    <i data-lucide="menu"></i>
+  </button>
+
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-top">
+      <div class="sidebar-identity">
+        <h1 id="sb-name" class="sidebar-name"></h1>
+        <p id="sb-role" class="sidebar-role"></p>
+      </div>
+      <nav id="nav-menu" class="sidebar-nav"></nav>
+    </div>
+    <div class="sidebar-bottom">
+      <div class="sidebar-control">
+        <div class="sidebar-control-label">
+          <i data-lucide="sun"></i>
+          <span id="lbl-theme"></span>
+        </div>
+        <button id="theme-toggle" class="theme-switch" aria-label="Toggle theme">
+          <div class="theme-switch-knob"></div>
+        </button>
+      </div>
+      <div class="sidebar-control">
+        <div class="sidebar-control-label">
+          <i data-lucide="globe"></i>
+          <span id="lbl-lang"></span>
+        </div>
+        <button id="lang-toggle" class="lang-btn">EN</button>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <section id="about" class="hero">
+      <div class="hero-text">
+        <h1 id="hero-title" class="hero-title"></h1>
+        <p id="hero-desc" class="hero-desc"></p>
+      </div>
+      <div class="hero-actions">
+        <div id="hero-socials" class="hero-socials"></div>
+        <div class="email-wrapper">
+          <input type="text" id="hero-email" class="email-input" readonly>
+          <button id="copy-email-btn" class="email-copy-btn" aria-label="Copy email">
+            <i data-lucide="copy"></i>
+          </button>
+        </div>
+        <a id="hero-cv" href="#" target="_blank" class="cv-btn">
+          <i data-lucide="download"></i>
+          <span id="hero-cv-text"></span>
+        </a>
+      </div>
+    </section>
+
+    <section id="education" class="education">
+      <div class="section-header">
+        <h2 id="edu-title" class="section-title"></h2>
+        <p id="edu-desc" class="section-desc"></p>
+      </div>
+      <div id="edu-timeline" class="timeline"></div>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="section-header">
+        <h2 id="proj-title" class="section-title"></h2>
+        <p id="proj-desc" class="section-desc"></p>
+      </div>
+      <div id="proj-grid" class="projects-grid"></div>
+      <button id="proj-show-more" class="proj-show-more" style="display:none"></button>
+    </section>
+
+    <section id="experience" class="experience">
+      <div class="section-header">
+        <h2 id="exp-title" class="section-title"></h2>
+        <p id="exp-desc" class="section-desc"></p>
+      </div>
+      <div id="exp-grid" class="exp-grid"></div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="contact-bg">
+        <div class="contact-bg-radial-1"></div>
+        <div class="contact-bg-radial-2"></div>
+      </div>
+      <div class="contact-content">
+        <div class="contact-heading">
+          <h2 id="contact-title" class="contact-title"></h2>
+          <p id="contact-subtitle" class="contact-subtitle"></p>
+          <p id="contact-desc" class="contact-desc"></p>
+        </div>
+        <div id="contact-socials" class="contact-socials"></div>
+        <button id="btn-top" class="btn-top">
+          <i data-lucide="arrow-up"></i>
+          <span id="contact-btn"></span>
+        </button>
+        <div class="contact-footer">
+          <p class="footer-made">
+            <span id="footer-made"></span> <i data-lucide="heart"></i> by <span id="footer-name"></span>
+          </p>
+          <p id="footer-rights" class="footer-rights"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="project-modal">
+    <div class="modal-body">
+      <div class="modal-header">
+        <div class="modal-header-text">
+          <h3 id="pm-title" class="modal-title"></h3>
+          <p id="pm-desc" class="modal-subtitle"></p>
+        </div>
+        <button id="pm-close" class="modal-close" aria-label="Close">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="modal-sections">
+        <div>
+          <h4 id="pm-tech-lbl" class="modal-section-title"></h4>
+          <p id="pm-tech" class="modal-section-text"></p>
+        </div>
+        <div>
+          <h4 id="pm-purp-lbl" class="modal-section-title"></h4>
+          <p id="pm-purp" class="modal-section-text"></p>
+        </div>
+        <div>
+          <h4 id="pm-how-lbl" class="modal-section-title"></h4>
+          <p id="pm-how" class="modal-section-text"></p>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="exp-modal" class="exp-modal">
+    <div class="modal-body">
+      <div class="modal-header">
+        <div class="modal-header-text">
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <h3 id="em-title" class="modal-title"></h3>
+            <a id="em-github" href="#" target="_blank" class="em-github-subtle" style="display:none"></a>
+          </div>
+          <p id="em-desc" class="modal-subtitle"></p>
+        </div>
+        <button id="em-close" class="modal-close" aria-label="Close">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="exp-detail-body">
+        <p id="em-role-period" class="exp-detail-role-period"></p>
+        <p id="em-summary" class="exp-detail-summary"></p>
+        <div class="modal-sections">
+          <div>
+            <h4 id="em-highlights-lbl" class="modal-section-title">Highlights</h4>
+            <ul id="em-highlights" class="exp-highlights"></ul>
+          </div>
+          <div>
+            <h4 id="em-skills-lbl" class="modal-section-title">Technologies</h4>
+            <div id="em-skills" class="exp-skills-grid slide-tags"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </dialog>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/state.js"></script>
+  <script src="assets/js/render.js"></script>
+  <script src="assets/js/controllers.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>

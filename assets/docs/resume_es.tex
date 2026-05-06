@@ -1,0 +1,180 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\usepackage[sfdefault]{roboto}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\pdfgentounicode=1
+
+\titleformat{\section}{\large\bfseries\scshape\raggedright}{}{0em}{}[\titlerule]
+
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeSubheading}[4]{
+\vspace{-1pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubHeadingList}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.35in, label=\textbullet]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+\begin{document}
+
+\begin{center}
+  \textbf{\Huge Luis Alfredo Cuamatzi Flores} \\ \vspace{3pt}
+  \small
+  \href{mailto:mexboxluis1@gmail.com}{mexboxluis1@gmail.com} \;|\;
+  Tlaxcala, México \;|\;
+  \href{https://github.com/MexboxLuis}{github.com/MexboxLuis} \;|\;
+  \href{https://www.linkedin.com/in/mexboxluis}{linkedin.com/in/mexboxluis} \;|\;
+  \href{https://mexboxluis.github.io}{mexboxluis.github.io}
+\end{center}
+
+\section*{Resumen}
+Desarrollador de software con experiencia en apps móviles, servicios backend e integración de IA. He trabajado en equipos de desarrollo y multidisciplinarios en entornos reales de producción.
+
+\section{Experiencia}
+\resumeSubHeadingList
+
+\resumeSubheading
+  {Desarrollador de Software e IA}{Jun 2025 -- Presente}
+  {Net2Alliance}{Ciudad de México, México}
+  \resumeItemListStart
+    \resumeItem{Desarrollo full-stack y de IA para plataformas de telecomunicaciones y CRM.}
+    \resumeItem{Construcción de un servicio en FastAPI para análisis de sentimientos y generación automática de resúmenes en PDF a partir de transcripciones de llamadas.}
+    \resumeItem{Desarrollo de un cliente de mensajería sobre WebSockets para WhatsApp con notificaciones en tiempo real, soporte multimedia y transferencias entre agentes.}
+    \resumeItem{Implementación de operaciones CRUD, control de acceso por roles, auditoría y módulos de reportes en paneles administrativos.}
+    \resumeItem{Participación en rediseños de UI/UX con Figma y seguimiento de tareas con tableros Kanban en Jira.}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Ingeniero Backend e IA}{Ene 2025 -- Dic 2025}
+  {L4L (Reconstrucción 3D de Prendas para Virtual Try-On)}{Tlaxcala, México}
+  \resumeItemListStart
+    \resumeItem{Construcción de un pipeline distribuido para reconstrucción 3D de prendas desde una sola imagen.}
+    \resumeItem{Desarrollo de un orquestador en FastAPI para coordinar captura de imagen, confirmación de avatar y generación de modelos GLB.}
+    \resumeItem{Optimización de modelos: adaptación de SMPLer-X y Sewformer para entornos locales con GPU limitada, ajustando los pipelines de inferencia para entrada de imagen única.}
+    \resumeItem{Servidor local en Windows con mayapy y Qualoth para simulación física de tela y conversión FBX a GLB.}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Desarrollador Android}{Oct 2024 -- Ago 2025}
+  {Instituto Politécnico Nacional -- PIT}{Tlaxcala, México}
+  \resumeItemListStart
+    \resumeItem{Diseño y desarrollo de una app Android nativa para digitalizar la gestión de asistencia del Programa Institucional de Tutorías.}
+    \resumeItem{Registro de asistencia por QR con validación y control de duplicados en ventana de 45 minutos.}
+    \resumeItem{Generador de horarios semanales con detección de traslapes entre aulas y tutores.}
+    \resumeItem{Sincronización offline con Firestore y exportación a CSV para reportes institucionales.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\section{Educación}
+\resumeSubHeadingList
+
+\resumeSubheading
+  {Ingeniería en Inteligencia Artificial}{Ago 2021 -- Ene 2026}
+  {Instituto Politécnico Nacional (IPN) -- UPIIT}{Tlaxcala, México}
+
+\resumeSubheading
+  {Programa de Formación de Líderes}{Ago 2024}
+  {Queen Mary University of London}{Londres, Reino Unido}
+
+\resumeSubHeadingListEnd
+
+\section{Proyectos}
+\resumeSubHeadingList
+
+\resumeSubheading
+  {Kuromi Adventure}{Ene 2026}
+  {Juego móvil en Unity}{}
+  \resumeItemListStart
+    \resumeItem{Juego runner 2D/3D con progresión de niveles, obstáculos y encuentros con jefes.}
+    \resumeItem{Desarrollado en Unity con C\# y controles táctiles para Android.}
+    \resumeItem{\textbf{Tecnologías:} Unity, C\#, Android.}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Lexfy}{Nov 2024}
+  {Proyecto Android + IA}{}
+  \resumeItemListStart
+    \resumeItem{Aplicación Android con OCR y generación de imágenes mediante una interfaz de chat.}
+    \resumeItem{Cliente Android conectado por HTTP a un backend local en Python/Flask con EasyOCR, GOT-OCR2\_0 y Together AI.}
+    \resumeItem{\textbf{Tecnologías:} Kotlin, Jetpack Compose, Python, Flask, Firebase, EasyOCR, GOT-OCR2\_0, Transformers.}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {SmartEMG Vision}{Nov 2024}
+  {Prototipo Android para interacción asistida}{}
+  \resumeItemListStart
+    \resumeItem{Prototipo móvil que combina clasificación de señales EMG y detección de objetos para sugerir acciones según el contexto visual.}
+    \resumeItem{Cliente Android con Jetpack Compose y CameraX conectado por HTTP a servidores locales en Python con YOLOv8 y TensorFlow/Keras.}
+    \resumeItem{\textbf{Tecnologías:} Kotlin, Jetpack Compose, CameraX, Python, Flask, TensorFlow, Keras, YOLOv8.}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {SmartCrops}{Ago 2024}
+  {Prototipo móvil para monitoreo de invernaderos}{}
+  \resumeItemListStart
+    \resumeItem{Prototipo para monitoreo de cultivos, simulación de variables de invernadero y asistencia mediante chatbot basado en Gemini.}
+    \resumeItem{Aplicación de actividad única con Jetpack Compose, CameraX, OkHttp y Coil.}
+    \resumeItem{\textbf{Tecnologías:} Kotlin, Jetpack Compose, Gemini API, CameraX, OkHttp, Coil.}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {EduStream API}{Jun 2023}
+  {CMS web para contenido educativo}{}
+  \resumeItemListStart
+    \resumeItem{Sistema web para subir, categorizar y reproducir videos educativos por materia.}
+    \resumeItem{Backend con arquitectura MVC, manejo de archivos multimedia y sincronización entre almacenamiento físico y base de datos.}
+    \resumeItem{\textbf{Tecnologías:} Node.js, Express, MySQL, Handlebars, Bootstrap, Multer.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\section{Habilidades Técnicas}
+\resumeSubHeadingList
+  \resumeItem{\textbf{Lenguajes:} Kotlin, Python, JavaScript, TypeScript, PHP, C\#, SQL}
+  \resumeItem{\textbf{Móvil:} Android nativo, Jetpack Compose, Material 3, CameraX, Room, WorkManager, OkHttp, Coil, ZXing, React Native, Expo}
+  \resumeItem{\textbf{Backend:} FastAPI, Flask, Node.js, Express, WebSockets, REST APIs, arquitectura MVC}
+  \resumeItem{\textbf{IA / ML:} TensorFlow, Keras, PyTorch, Transformers, EasyOCR, YOLOv8, SMPLer-X, Gemini API, Together AI}
+  \resumeItem{\textbf{Bases de datos y nube:} Firestore, Firebase Realtime Database, MySQL, SQLite, Firebase Storage}
+  \resumeItem{\textbf{Herramientas:} Git, GitHub, Jira, Figma, Android Studio, VS Code, Postman}
+\resumeSubHeadingListEnd
+
+\section{Idiomas}
+\resumeSubHeadingList
+  \resumeItem{\textbf{Español:} Nativo}
+  \resumeItem{\textbf{Inglés:} B2 (MCER)}
+\resumeSubHeadingListEnd
+
+\end{document}
