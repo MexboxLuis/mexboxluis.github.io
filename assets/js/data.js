@@ -253,9 +253,9 @@ const DB = {
       ]
     },
     contact: {
-      title: "Get in Touch",
-      sub: "Open to collaborations and new projects.",
-      desc: "If you want to talk about software, AI, or a project, feel free to reach out."
+      title: "Contact",
+      sub: "Open to professional opportunities and technical collaborations.",
+      desc: "Feel free to reach out for opportunities related to software development, mobile applications, backend, or applied AI."
     }
   },
   ES: {
@@ -513,8 +513,8 @@ const DB = {
     },
     contact: {
       title: "Contacto",
-      sub: "Abierto a colaboraciones y nuevos proyectos.",
-      desc: "Si quieres hablar de software, IA o algún proyecto, no dudes en escribirme."
+      sub: "Disponible para oportunidades profesionales y colaboraciones técnicas.",
+      desc: "Puedes contactarme para oportunidades relacionadas con desarrollo de software, aplicaciones móviles, backend o IA aplicada."
     }
   }
 };
