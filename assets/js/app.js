@@ -1,9 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-  if (isSafari) {
-    document.documentElement.classList.add("is-safari");
-  }
-
   document.getElementById("theme-toggle").addEventListener("click", toggleTheme);
   document.getElementById("lang-toggle").addEventListener("click", toggleLanguage);
   document.getElementById("mobile-menu-btn").addEventListener("click", toggleMobileMenu);

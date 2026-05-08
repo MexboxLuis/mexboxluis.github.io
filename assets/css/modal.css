@@ -484,16 +484,14 @@ dialog[open] {
   }
 }
 
-.is-safari dialog[open] {
-  display: block;
-}
+@supports (background: -webkit-named-image(i)) {
+  dialog[open] {
+    display: grid !important;
+    height: -webkit-fit-content;
+    height: fit-content;
+  }
 
-.is-safari .modal-body {
-  max-height: 90dvh;
-}
-
-@media (min-width: 640px) {
-  .is-safari .modal-body {
-    max-height: 88dvh;
+  .modal-body {
+    height: -webkit-fill-available;
   }
 }
