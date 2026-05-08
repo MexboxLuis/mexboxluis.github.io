@@ -15,6 +15,24 @@ function sortProjects(items) {
   });
 }
 
+function sortExperience(categories) {
+  var MONTHS = {
+    jan: 0, feb: 1, mar: 2, apr: 3, may: 4, jun: 5,
+    jul: 6, aug: 7, sep: 8, oct: 9, nov: 10, dec: 11,
+    ene: 0, feb: 1, mar: 2, abr: 3, may: 4, jun: 5,
+    jul: 6, ago: 7, sep: 8, oct: 9, nov: 10, dic: 11
+  };
+  function parseStart(period) {
+    var part = period.split("–")[0].trim().split(/\s+/);
+    var m = (part[0] || "").toLowerCase().replace(/\.$/, "");
+    var y = parseInt(part[1], 10) || 0;
+    return y * 12 + (MONTHS[m] || 0);
+  }
+  return categories.slice().sort(function (a, b) {
+    return parseStart(a.period) - parseStart(b.period);
+  });
+}
+
 function renderSidebar(data) {
   document.getElementById("sb-name").textContent = data.global.name;
   document.getElementById("sb-role").textContent = data.global.role;
@@ -84,25 +102,74 @@ function renderEducation(data) {
   var timeline = document.getElementById("edu-timeline");
   timeline.innerHTML = "";
   data.education.items.forEach(function (item) {
+    var isMobile = window.matchMedia("(max-width: 639px)").matches;
+
     var div = document.createElement("div");
     div.className = "timeline-item";
-    div.innerHTML =
-      '<div class="timeline-dot"></div>' +
-      '<div class="timeline-card">' +
-      '<div class="timeline-card-inner">' +
-      '<div class="timeline-icon"><i data-lucide="' + item.icon + '"></i></div>' +
-      '<div class="timeline-details">' +
-      '<h3 class="timeline-title">' + item.title + "</h3>" +
-      '<p class="timeline-institution">' + item.inst + "</p>" +
-      '<div class="timeline-meta">' +
+
+    var dot = document.createElement("div");
+    dot.className = "timeline-dot";
+
+    var card = document.createElement("div");
+    card.className = "timeline-card";
+
+    var inner = document.createElement("div");
+    inner.className = "timeline-card-inner";
+
+    var iconEl = document.createElement("div");
+    iconEl.className = "timeline-icon";
+    iconEl.innerHTML = '<i data-lucide="' + item.icon + '"></i>';
+
+    var details = document.createElement("div");
+    details.className = "timeline-details";
+
+    var titleEl = document.createElement("h3");
+    titleEl.className = "timeline-title";
+    titleEl.textContent = item.title;
+
+    var instEl = document.createElement("p");
+    instEl.className = "timeline-institution";
+    instEl.textContent = item.inst;
+
+    var meta = document.createElement("div");
+    meta.className = "timeline-meta";
+    meta.innerHTML =
       '<span><i data-lucide="map-pin"></i> ' + item.loc + "</span>" +
-      '<span><i data-lucide="calendar"></i> ' + item.period + "</span>" +
-      "</div>" +
-      '<p class="timeline-desc">' + item.desc + "</p>" +
-      "</div></div></div>";
+      '<span><i data-lucide="calendar"></i> ' + item.period + "</span>";
+
+    var desc = document.createElement("p");
+    desc.className = "timeline-desc";
+    desc.textContent = item.desc;
+
+    details.appendChild(titleEl);
+    details.appendChild(instEl);
+    details.appendChild(meta);
+    details.appendChild(desc);
+    inner.appendChild(iconEl);
+    inner.appendChild(details);
+    card.appendChild(inner);
+
+    if (isMobile) {
+      var chevronSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>';
+      var toggle = document.createElement("button");
+      toggle.className = "timeline-toggle";
+      toggle.innerHTML = data.global.labels.expandDesc + " " + chevronSvg;
+      toggle.addEventListener("click", function () {
+        var isOpen = desc.classList.toggle("expanded");
+        toggle.classList.toggle("open", isOpen);
+        toggle.innerHTML = (isOpen
+          ? data.global.labels.collapseDesc
+          : data.global.labels.expandDesc) + " " + chevronSvg;
+      });
+      card.appendChild(toggle);
+    }
+
+    div.appendChild(dot);
+    div.appendChild(card);
     timeline.appendChild(div);
   });
 }
+
 
 function buildProjectCard(p, originalIndex, data) {
   var container = document.createElement("div");
@@ -196,12 +263,13 @@ function renderExperience(data) {
 
   var grid = document.getElementById("exp-grid");
   grid.innerHTML = "";
-  var cats = data.experience.categories;
-  cats.forEach(function (c, i) {
+  var sorted = sortExperience(data.experience.categories);
+  sorted.forEach(function (c, i) {
+    var originalIndex = data.experience.categories.indexOf(c);
     var btn = document.createElement("button");
     btn.className = "exp-card " + c.gradient;
-    if (i === cats.length - 1 && cats.length % 2 !== 0) btn.classList.add("exp-card-span-full");
-    btn.addEventListener("click", function () { openExpModal(i); });
+    if (i === sorted.length - 1 && sorted.length % 2 !== 0) btn.classList.add("exp-card-span-full");
+    btn.addEventListener("click", function () { openExpModal(originalIndex); });
 
     btn.innerHTML =
       '<div class="exp-card-pattern"></div>' +

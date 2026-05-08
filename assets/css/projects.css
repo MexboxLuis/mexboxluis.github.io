@@ -204,6 +204,13 @@
   .projects-grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  .projects-grid>.flip-container:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    margin-inline: auto;
+    width: 100%;
+  }
 }
 
 .proj-hidden {
@@ -219,6 +226,7 @@
     opacity: 0;
     transform: translateY(1.5rem);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

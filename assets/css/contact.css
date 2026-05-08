@@ -73,6 +73,15 @@
   width: 100%;
 }
 
+@media (max-width: 767px) {
+  .contact-socials>.contact-social-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    margin-inline: auto;
+    width: 100%;
+  }
+}
+
 .contact-social-card {
   display: block;
 }
