@@ -221,16 +221,35 @@ const DB = {
           gradient: "grad-blue",
           role: "AI & Backend Engineer",
           period: "Jan 2025 – Dec 2025",
-          summary: "3D garment reconstruction pipeline from a single image, connecting mobile clients, AI models, and 3D simulation.",
+          summary: "Graduation R&D project focused on 3D garment reconstruction for Virtual Try-On. Designed a distributed client-server pipeline connecting an Android app, AI inference services, physical cloth simulation, and GLB model delivery.",
           highlights: [
-            "Android App: Built with Kotlin/Compose featuring a virtual closet, social feed (OOTD), and profile management.",
-            "FastAPI Orchestrator: Python backend that coordinates image capture, avatar confirmation, and GLB generation.",
-            "Model optimization: adapted SMPLer-X and Sewformer to run on local resource-constrained environments, tuning inference pipelines for single-image input.",
-            "SMPLer-X Integration: Linux service to extract human pose and body shape (.npz) from photos.",
-            "Sewformer: Predicts sewing patterns from images using deep learning.",
-            "Maya Server: Local Windows server using mayapy and Qualoth for physical cloth simulation and FBX to GLB conversion."
+            "Client-Server Architecture: Integrated an Android app built with Jetpack Compose, a Linux inference server, and a Windows server for physical cloth simulation and FBX-to-GLB conversion.",
+            "FastAPI Orchestrator: Built a Python backend to coordinate image capture, avatar generation and confirmation, garment reconstruction, physical simulation, and GLB model delivery.",
+            "Body Estimation Model: Integrated a single-image 2D body pose and shape estimation model (SMPLer-X), adapting its output for compatibility with the simulation pipeline.",
+            "Garment Reconstruction Model: Adapted a two-level Transformer model for sewing pattern reconstruction from 2D garment images (Sewformer).",
+            "Model Compression: Evaluated pruning, PTQ, and QAT variants using geometric and connectivity metrics.",
+            "Performance Result: Compressed the final model with a 5.43x compression ratio and a 38.75% latency reduction, reaching 32.26 MB and 165.63 ms CPU inference time."
           ],
-          skills: ["Kotlin", "Jetpack Compose", "FastAPI", "Python", "PyTorch", "SMPLer-X", "Maya/Qualoth", "SceneViewer", "Firebase", "OkHttp"],
+          skills: [
+            "Artificial Intelligence",
+            "Computer Vision",
+            "3D Reconstruction",
+            "Model Compression",
+            "Transformers",
+            "PyTorch",
+            "FastAPI",
+            "Python",
+            "Kotlin",
+            "Jetpack Compose",
+            "SMPLer-X",
+            "Sewformer",
+            "PTQ",
+            "QAT",
+            "Pruning",
+            "Maya/Qualoth",
+            "Firebase",
+            "OkHttp"
+          ],
           github: null
         },
         {
@@ -241,13 +260,13 @@ const DB = {
           period: "Jun 2025 – Present",
           summary: "Full-stack and AI development for telecom and CRM platforms, including web calling tools, WhatsApp integration, and call analysis features. Collaborated in an agile team using Jira and GitHub.",
           highlights: [
-            "Call Analysis Backend: Built a FastAPI service for sentiment analysis and automated PDF summaries from call transcripts.",
+            "Call Analysis Backend: Built a FastAPI service integrated with AWS SageMaker for sentiment analysis and automated PDF summaries from call transcripts.",
             "WhatsApp CRM Integration: Developed a responsive messaging client over WebSockets with multimedia support, real-time notifications, and agent transfers.",
             "Embedded Calling Module: Built a floating calling component that can be integrated into external systems.",
             "Admin Dashboards: Implemented CRUD operations, role-based access control, audit logging, and financial reporting modules.",
             "Agile Workflow: Participated in proposals, UI/UX redesigns, and task tracking with Kanban boards."
           ],
-          skills: ["FastAPI", "WebSockets", "Python", "PHP", "JavaScript", "AWS SageMaker", "Figma", "Jira"],
+          skills: ["FastAPI", "WebSockets", "Python", "PHP", "JavaScript", "AWS SageMaker", "REST APIs", "CRM", "Role-Based Access Control", "Figma", "Jira", "GitHub"],
           github: null
         }
       ]
@@ -478,18 +497,37 @@ const DB = {
           icon: "shirt",
           title: "L4L | Reconstrucción 3D de Prendas de Vestir para Virtual Try-On",
           gradient: "grad-blue",
-          role: "Ingeniero Backend & IA",
+          role: "Ingeniero Backend e IA",
           period: "Ene 2025 – Dic 2025",
-          summary: "Pipeline de reconstrucción 3D de prendas desde una sola imagen, conectando clientes móviles, modelos de IA y simulación 3D para virtual try-on.",
+          summary: "Proyecto de titulación e I+D enfocado en reconstrucción 3D de prendas para Virtual Try-On. Diseño de un pipeline cliente-servidor que conecta una app Android, servicios de inferencia de IA, simulación física de tela y entrega de modelos GLB.",
           highlights: [
-            "App Android: Construida con Kotlin/Compose incluyendo closet virtual, feed social (OOTD) y perfiles.",
-            "Orquestador FastAPI: Backend en Python que coordina captura de imagen, confirmación de avatar y generación de GLB.",
-            "Optimización de modelos: adaptación de SMPLer-X y Sewformer para ejecutarse en entornos locales con recursos limitados, ajustando los pipelines de inferencia para entrada de imagen única.",
-            "Integración SMPLer-X: Servicio en Linux para extraer postura y forma corporal (.npz) a partir de fotos.",
-            "Sewformer: Predice patrones de costura desde imágenes usando aprendizaje profundo.",
-            "Servidor Maya: Servidor local en Windows con mayapy y Qualoth para simulación de tela y conversión FBX a GLB."
+            "Arquitectura cliente-servidor: Integración de una app Android construida con Jetpack Compose, un servidor Linux de inferencia y un servidor Windows para simulación física de tela y conversión FBX a GLB.",
+            "Orquestador FastAPI: Construcción de un backend en Python para coordinar captura de imagen, generación y confirmación de avatar, reconstrucción de prendas, simulación física y entrega de modelos GLB.",
+            "Modelo de estimación corporal: Integración de un modelo de estimación de pose y forma corporal desde una sola imagen 2D (SMPLer-X), adaptando su salida para compatibilidad con el pipeline de simulación.",
+            "Modelo de reconstrucción de prendas: Adaptación de un modelo Transformer de dos niveles para reconstrucción de patrones de costura desde imágenes 2D de prendas (Sewformer).",
+            "Compresión de modelos: Evaluación de variantes con poda, PTQ y QAT usando métricas geométricas y de conectividad.",
+            "Resultado de rendimiento: Compresión del modelo final con una razón de compresión de 5.43x y reducción de latencia de 38.75%, alcanzando 32.26 MB y 165.63 ms de inferencia en CPU."
           ],
-          skills: ["Kotlin", "Jetpack Compose", "FastAPI", "Python", "PyTorch", "SMPLer-X", "Maya/Qualoth", "SceneViewer", "Firebase", "OkHttp"],
+          skills: [
+            "Inteligencia Artificial",
+            "Visión por Computadora",
+            "Reconstrucción 3D",
+            "Compresión de Modelos",
+            "Transformers",
+            "PyTorch",
+            "FastAPI",
+            "Python",
+            "Kotlin",
+            "Jetpack Compose",
+            "SMPLer-X",
+            "Sewformer",
+            "PTQ",
+            "QAT",
+            "Poda",
+            "Maya/Qualoth",
+            "Firebase",
+            "OkHttp"
+          ],
           github: null
         },
         {
@@ -500,13 +538,13 @@ const DB = {
           period: "Jun 2025 – Presente",
           summary: "Desarrollo full-stack y de IA para plataformas de telecomunicaciones y CRM, incluyendo herramientas de llamadas web, integración con WhatsApp y funciones de análisis de llamadas. Trabajo colaborativo en un equipo ágil con Jira y GitHub.",
           highlights: [
-            "Backend de análisis de llamadas: Construcción de un servicio en FastAPI para análisis de sentimientos y generación automática de resúmenes en PDF a partir de transcripciones.",
+            "Backend de análisis de llamadas: Construcción de un servicio en FastAPI integrado con AWS SageMaker para análisis de sentimientos y generación automática de resúmenes en PDF a partir de transcripciones.",
             "Integración CRM para WhatsApp: Desarrollo de un cliente de mensajería responsivo sobre WebSockets, con soporte multimedia, notificaciones en tiempo real y transferencias entre agentes.",
             "Módulo de llamadas embebido: Desarrollo de un componente flotante de llamadas integrable en sistemas externos.",
             "Paneles administrativos: Implementación de operaciones CRUD, control de acceso por roles, auditoría y módulos de reportes financieros.",
             "Flujo ágil de trabajo: Participación en propuestas, rediseños de UI/UX y seguimiento de tareas con tableros Kanban."
           ],
-          skills: ["FastAPI", "WebSockets", "Python", "PHP", "JavaScript", "AWS SageMaker", "Figma", "Jira"],
+          skills: ["FastAPI", "WebSockets", "Python", "PHP", "JavaScript", "AWS SageMaker", "APIs REST", "CRM", "Control de Acceso por Roles", "Figma", "Jira", "GitHub"],
           github: null
         }
       ]

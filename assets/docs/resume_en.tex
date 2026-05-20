@@ -60,7 +60,7 @@
 \end{center}
 
 \section*{Summary}
-AI Engineer and Software Developer with experience in mobile applications, backend services, and AI model integration. I have worked on real-world projects combining Android, APIs, automation, data processing, and product-oriented interfaces to connect users, data, and business processes.
+AI Engineer and Software Developer with experience in mobile applications, backend services, and AI model integration. I have worked on real-world projects combining Android, APIs, automation, data processing, CRM, computer vision, and product-oriented interfaces to connect users, data, and business processes.
 
 \section{Experience}
 \resumeSubHeadingList
@@ -69,32 +69,32 @@ AI Engineer and Software Developer with experience in mobile applications, backe
   {Software \& AI Developer}{Jun 2025 -- Present}
   {Net2Alliance}{Mexico City, Mexico}
   \resumeItemListStart
-    \resumeItem{Full-stack and AI development for telecom and CRM platforms.}
-    \resumeItem{Built a FastAPI service for sentiment analysis and automated PDF summary generation from call transcripts.}
-    \resumeItem{Developed a responsive WebSocket-based messaging client for WhatsApp with real-time notifications, multimedia support, and agent transfers.}
-    \resumeItem{Implemented CRUD operations, role-based access control, audit logging, and reporting modules across admin dashboards.}
-    \resumeItem{Participated in UI/UX redesigns with Figma and task tracking with Jira Kanban boards.}
+    \resumeItem{Full-stack development and AI integration for telecom and CRM platforms, working with FastAPI, Python, PHP, JavaScript, WebSockets, and AWS SageMaker.}
+    \resumeItem{Built 2 modules and 2 endpoints for sentiment analysis and automated PDF summary generation from call transcripts using AWS SageMaker.}
+    \resumeItem{Developed a WebSocket-based WhatsApp messaging client with real-time notifications, multimedia support, and agent transfer workflows.}
+    \resumeItem{Implemented 4 CRM modules with 4 endpoints, CRUD operations, access control for 3 user roles, audit logging, and administrative reporting.}
+    \resumeItem{Contributed to UI/UX redesigns with Figma and task tracking using Jira, GitHub, and Kanban boards.}
   \resumeItemListEnd
 
 \resumeSubheading
-  {AI \& Backend Engineer}{Jan 2025 -- Dec 2025}
+  {AI \& Backend Engineer -- Graduation Project / R\&D}{Jan 2025 -- Dec 2025}
   {L4L -- 3D Garment Reconstruction for Virtual Try-On}{Tlaxcala, Mexico}
   \resumeItemListStart
-    \resumeItem{Built a distributed pipeline for 3D garment reconstruction from a single image.}
-    \resumeItem{Developed a FastAPI orchestrator coordinating image capture, avatar confirmation, and GLB model generation.}
-    \resumeItem{Model optimization: adapted SMPLer-X and Sewformer to run on local resource-constrained environments, tuning inference pipelines for single-image input.}
-    \resumeItem{Integrated SMPLer-X to extract user body pose and shape from a single photograph.}
-    \resumeItem{Local Windows server using mayapy and Qualoth for physical cloth simulation and FBX-to-GLB conversion.}
+    \resumeItem{Designed a client--server architecture for Virtual Try-On, integrating an Android app built with Jetpack Compose, a Linux inference server, and a Windows server for physical simulation and FBX--GLB conversion.}
+    \resumeItem{Developed a FastAPI orchestrator to coordinate image capture, avatar generation and confirmation, garment reconstruction, physical simulation, and delivery of 3D models in GLB format.}
+    \resumeItem{Integrated a single-image 2D body pose and shape estimation model (SMPLer-X), adapting its output for compatibility with the simulation pipeline.}
+    \resumeItem{Adapted a two-level Transformer model for sewing pattern reconstruction from a 2D image (Sewformer), evaluating pruning, PTQ, and QAT variants with geometric and connectivity metrics.}
+    \resumeItem{Compressed the final model with a 5.43x compression ratio and a 38.75\% latency reduction, reaching 32.26 MB and 165.63 ms CPU inference time.}
   \resumeItemListEnd
 
 \resumeSubheading
-  {Android Developer}{Oct 2024 -- Aug 2025}
-  {Instituto Polit\'ecnico Nacional -- PIT}{Tlaxcala, Mexico}
+  {Android Developer -- Social Service}{Oct 2024 -- Aug 2025}
+  {Instituto Polit\'ecnico Nacional -- Institutional Tutoring Program}{Tlaxcala, Mexico}
   \resumeItemListStart
-    \resumeItem{Designed and built a native Android app to digitize attendance management for the IPN Institutional Tutoring Program.}
-    \resumeItem{QR-based attendance scanning with real-time validation, duplicate detection, and active session control.}
-    \resumeItem{Weekly schedule builder with overlap detection for classrooms and tutors.}
-    \resumeItem{Offline-first sync with Firestore and CSV export for institutional reporting.}
+    \resumeItem{Implemented QR-based attendance scanning with real-time validation, duplicate detection, and active session control.}
+    \resumeItem{Built a 3-role user system (Admin, Peer Tutor, and Advisor) with separate panels based on permissions.}
+    \resumeItem{Built a weekly schedule generator with overlap detection for classrooms and tutors.}
+    \resumeItem{Implemented offline-first synchronization with Firestore and CSV export for institutional reporting.}
   \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -117,7 +117,7 @@ AI Engineer and Software Developer with experience in mobile applications, backe
 
 \resumeSubheading
   {Lexfy}{Dec 2024}
-  {Android + AI project}{}
+  {Android + AI Project}{\href{https://github.com/MexboxLuis/Lexfy}{GitHub}}
   \resumeItemListStart
     \resumeItem{Android app with OCR and AI image generation through a chat interface.}
     \resumeItem{Android client communicating via HTTP with a local Python/Flask backend running EasyOCR, GOT-OCR2\_0, and Together AI.}
@@ -126,7 +126,7 @@ AI Engineer and Software Developer with experience in mobile applications, backe
 
 \resumeSubheading
   {SmartEMG Vision}{Nov 2024}
-  {Android prototype for assistive interaction}{}
+  {Android prototype for assistive interaction}{\href{https://github.com/MexboxLuis/SmartEMG-Vision}{GitHub}}
   \resumeItemListStart
     \resumeItem{Mobile prototype combining EMG signal classification and object detection to suggest context-aware actions.}
     \resumeItem{Android client with Jetpack Compose and CameraX sending data via HTTP to local Python servers running YOLOv8 and TensorFlow/Keras.}
@@ -135,7 +135,7 @@ AI Engineer and Software Developer with experience in mobile applications, backe
 
 \resumeSubheading
   {SmartCrops}{Aug 2024}
-  {Mobile prototype for greenhouse monitoring}{}
+  {Mobile prototype for greenhouse monitoring}{\href{https://github.com/MexboxLuis/SmartCrops}{GitHub}}
   \resumeItemListStart
     \resumeItem{Prototype for crop monitoring, greenhouse variable simulation, and AI-based chatbot assistance (TomaBot, powered by Gemini).}
     \resumeItem{Single-activity Jetpack Compose app with CameraX, OkHttp, and Coil.}
@@ -143,8 +143,17 @@ AI Engineer and Software Developer with experience in mobile applications, backe
   \resumeItemListEnd
 
 \resumeSubheading
+  {CommuniSync}{May 2024}
+  {Android community platform}{\href{https://github.com/MexboxLuis/CommuniSync}{GitHub}}
+  \resumeItemListStart
+    \resumeItem{Built a native Android app for neighborhood engagement, including civic issue reports, polls, forums, a local directory, notifications, user profiles, and guest access.}
+    \resumeItem{Integrated Firebase Authentication and Firestore for email, Google, and guest sign-in, data storage, and real-time synchronization.}
+    \resumeItem{\textbf{Tech:} Kotlin, Jetpack Compose, Material 3, Firebase Auth, Firestore, Coil.}
+  \resumeItemListEnd
+
+\resumeSubheading
   {EduStream API}{Jun 2023}
-  {Web-based educational content management platform}{}
+  {Web-based educational content management platform}{\href{https://github.com/MexboxLuis/EduStreamAPI}{GitHub}}
   \resumeItemListStart
     \resumeItem{Web platform for uploading, categorizing, and streaming educational videos by subject.}
     \resumeItem{MVC backend with multimedia file management and synchronization between physical storage and the database.}
@@ -155,12 +164,12 @@ AI Engineer and Software Developer with experience in mobile applications, backe
 
 \section{Technical Skills}
 \resumeSubHeadingList
-  \resumeItem{\textbf{Languages:} Kotlin, Python, JavaScript, TypeScript, PHP, SQL, C\#}
-  \resumeItem{\textbf{Mobile:} Native Android, Jetpack Compose, Android Views/XML, Material 3, CameraX, Room, WorkManager, OkHttp, Coil, ZXing, React Native, Expo}
+  \resumeItem{\textbf{Languages:} Kotlin, Python, JavaScript, TypeScript, PHP, SQL}
+  \resumeItem{\textbf{Mobile:} Native Android, Jetpack Compose, Android Views/XML, Material 3, CameraX, Room, WorkManager, OkHttp, Coil, ZXing}
   \resumeItem{\textbf{Backend:} FastAPI, Flask, Node.js, Express, WebSockets, REST APIs}
   \resumeItem{\textbf{AI / ML:} TensorFlow, Keras, PyTorch, Transformers, EasyOCR, YOLOv8, SMPLer-X, Gemini API, Together AI}
-  \resumeItem{\textbf{Databases / Cloud:} Firestore, Firebase Realtime Database, Firebase Storage, MySQL, SQLite}
-  \resumeItem{\textbf{Architecture \& Methodologies:} Agile / Scrum, Kanban, MVC, MVVM, Offline-first architecture, REST API design}
+  \resumeItem{\textbf{Databases / Cloud:} AWS SageMaker, Firestore, Firebase Realtime Database, Firebase Storage, MySQL, SQLite}
+  \resumeItem{\textbf{Architecture \& Methodologies:} Agile / Scrum, Kanban, MVC, MVVM, offline-first architecture, REST API design}
   \resumeItem{\textbf{Tools:} Git, GitHub, Jira, Figma, Postman, Android Studio, VS Code, Linux/CLI, SSH}
 \resumeSubHeadingListEnd
 
