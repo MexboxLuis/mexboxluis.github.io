@@ -485,7 +485,13 @@ dialog[open] {
 }
 
 @supports (background: -webkit-named-image(i)) {
+  dialog,
   dialog[open] {
-    display: grid !important;
+    height: -webkit-fit-content;
+    height: fit-content;
+  }
+
+  .modal-body {
+    flex: 0 1 auto;
   }
 }
