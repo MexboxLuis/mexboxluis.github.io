@@ -46,7 +46,7 @@ const DB = {
       items: [
         {
           title: "Artificial Intelligence Engineering",
-          inst: "Instituto Politécnico Nacional (UPIIT)",
+          inst: "Instituto Politécnico Nacional",
           loc: "Tlaxcala, Mexico",
           period: "Aug 2021 – Jan 2026",
           desc: "Focused on artificial intelligence, algorithms, computer vision, natural language processing, software development, and AI model integration in real applications.",
@@ -324,7 +324,7 @@ const DB = {
       items: [
         {
           title: "Ingeniería en Inteligencia Artificial",
-          inst: "Instituto Politécnico Nacional (UPIIT)",
+          inst: "Instituto Politécnico Nacional",
           loc: "Tlaxcala, México",
           period: "Ago 2021 – Ene 2026",
           desc: "Enfocado en inteligencia artificial, algoritmos, visión artificial, procesamiento de lenguaje natural, desarrollo de software e integración de modelos de IA en aplicaciones reales.",
